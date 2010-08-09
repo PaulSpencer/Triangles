@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1003]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</TopNode>
+  <SelectedNode>[0-1003]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1003]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll" Expanded="true" />
+    <Node UniqueName="[0-1004]GeometricalObjects" Expanded="true" />
+    <Node UniqueName="[0-1005]GeometricalObjects.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]GeometricalObjects.Tests.TriangleTestSuite" Expanded="true" />
+  </Nodes>
+</VisualState>

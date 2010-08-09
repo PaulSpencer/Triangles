@@ -1,0 +1,17 @@
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.pdb
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.dll
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.dll
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.xml
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.xml
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\obj\Debug\ResolveAssemblyReference.cache
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.dll
+c:\users\vlad\documents\visual studio 2010\Projects\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.dll
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.dll
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.xml
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.xml
