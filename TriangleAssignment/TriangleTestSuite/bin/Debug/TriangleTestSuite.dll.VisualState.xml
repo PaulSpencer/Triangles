@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1003]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</TopNode>
-  <SelectedNode>[0-1003]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</SelectedNode>
+  <TopNode>[0-1015]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</TopNode>
+  <SelectedNode>[0-1015]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1003]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll" Expanded="true" />
-    <Node UniqueName="[0-1004]GeometricalObjects" Expanded="true" />
-    <Node UniqueName="[0-1005]GeometricalObjects.Tests" Expanded="true" />
+    <Node UniqueName="[0-1015]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll" Expanded="true" />
+    <Node UniqueName="[0-1016]GeometricalObjects" Expanded="true" />
+    <Node UniqueName="[0-1017]GeometricalObjects.Tests" Expanded="true" />
+    <Node UniqueName="[0-1003]GeometricalObjects.Tests.PointTests" Expanded="true" />
+    <Node UniqueName="[0-1006]GeometricalObjects.Tests.PointTests.Equals_DifferentPoints_ReturnsFalse" Expanded="true" />
+    <Node UniqueName="[0-1009]GeometricalObjects.Tests.PointTests.Equals_SamePoints_ReturnsTrue" Expanded="true" />
+    <Node UniqueName="[0-1012]GeometricalObjects.Tests.PointTests.ToString_WithTwoPoints_ReturnsDescriptiveText" Expanded="true" />
     <Node UniqueName="[0-1000]GeometricalObjects.Tests.TriangleTestSuite" Expanded="true" />
   </Nodes>
 </VisualState>
