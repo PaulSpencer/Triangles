@@ -30,6 +30,8 @@ namespace GeometricalObjects.Tests
         {
             var mockGeometryCalculator = mockRepository.DynamicMock<IGeometryCalculator>();
             Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).IgnoreArguments().Return(false);
+            Expect.Call(mockGeometryCalculator.CalculateInternalAngle(dummyPointA, dummyPointB, dummyPointC))
+                .IgnoreArguments().Return(60);
             mockRepository.ReplayAll();
 
             var result = new Triangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator);
@@ -104,6 +106,13 @@ namespace GeometricalObjects.Tests
         {
             var result = SetTriangleAngles(60d, 60d, 60d);
             Assert.IsFalse(result.IsScalene());
+        }
+
+        [Test]
+        [ExpectedException(typeof(ArgumentException), ExpectedMessage = "All internal angles must add up to 180 degrees")]
+        public void Constructor_InternalAnglesNotEqualTo180Degrees_ThrowException()
+        {
+            var result = SetTriangleAngles(100d, 100d, 100d);
         }
 
         public Triangle SetTriangleAngles(double angleA, double angleB, double angleC)

@@ -18,7 +18,7 @@ namespace GeometricalObjects
             B = b;
             C = c;
 
-            if (!IsValidTriangle())
+            if (geometory.IsAStraightLine(A, B, C))
             {
                 throw new ArgumentException("Can't have 3 points on same line");
             }
@@ -26,12 +26,13 @@ namespace GeometricalObjects
             angleA = geometory.CalculateInternalAngle(A, B, C);
             angleB = geometory.CalculateInternalAngle(B, C, A);
             angleC = geometory.CalculateInternalAngle(C, A, B);
+
+            if (angleA + angleB + angleC != 180d)
+            {
+                throw new ArgumentException("All internal angles must add up to 180 degrees");
+            }
         }
 
-        private bool IsValidTriangle()
-        {
-            return !geometory.IsAStraightLine(A,B,C);
-        }
 
         public Point A { get; private set; }
 
