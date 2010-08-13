@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeometryShapeFactory.cs" />
     <Compile Include="IGeometryCalculator.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Triangle.cs" />
