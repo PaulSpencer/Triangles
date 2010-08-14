@@ -4,60 +4,89 @@ namespace GeometricalObjects
 {
     public class Triangle
     {
-        private IGeometryCalculator geometory;
-        private readonly double angleA;
-        private readonly double angleB;
-        private readonly double angleC;
+        private readonly IGeometryCalculator _geometry;
+        
+        private double? angle1;
+        private double? angle2;
+        private double? angle3;
+        
+        #region Properties
 
+        public Point Vertex1 { get; private set; }
+        public Point Vertex2 { get; private set; }
+        public Point Vertex3 { get; private set; }
 
-        public Triangle(Point a, Point b, Point c, IGeometryCalculator geometory)
+        public double Angle1
         {
-            this.geometory = geometory;
-
-            A = a;
-            B = b;
-            C = c;
-
-            if (geometory.IsAStraightLine(A, B, C))
+            get
             {
-                throw new ArgumentException("Can't have 3 points on same line");
-            }
-
-            angleA = geometory.CalculateInternalAngle(A, B, C);
-            angleB = geometory.CalculateInternalAngle(B, C, A);
-            angleC = geometory.CalculateInternalAngle(C, A, B);
-
-            if (angleA + angleB + angleC != 180d)
-            {
-                throw new ArgumentException("All internal angles must add up to 180 degrees");
+                if (angle1.HasValue)
+                {
+                    return angle1.Value;
+                }
+                angle1 = _geometry.GetInternalAngle(Vertex1, Vertex2, Vertex3);
+                return angle1.Value;
             }
         }
 
+        public double Angle2
+        {
+            get
+            {
+                if (angle2.HasValue)
+                {
+                    return angle2.Value;
+                }
+                angle2 = _geometry.GetInternalAngle(Vertex2, Vertex1, Vertex3);
+                return angle2.Value;
+            }
 
-        public Point A { get; private set; }
+        }
 
-        public Point B { get; private set; }
+        public double Angle3
+        {
+            get
+            {
+                if (angle3.HasValue)
+                {
+                    return angle3.Value;
+                }
+                angle3 = _geometry.GetInternalAngle(Vertex3, Vertex1, Vertex2);
+                return angle3.Value;
+            }
+        } 
+        
+        #endregion
 
-        public Point C { get; private set; }
+        internal Triangle(Point vertex1, Point vertex2, Point vertex3, IGeometryCalculator geometry)
+        {
+            _geometry = geometry;
+
+            Vertex1 = vertex1;
+            Vertex2 = vertex2;
+            Vertex3 = vertex3;
+        }
 
         public bool IsEquilateral()
         {
-            return angleA == 60d && angleB == 60d && angleC == 60d;
+            return (Angle1 == 60d && Angle2 == 60d && Angle3 == 60d);
         }
 
         public bool IsIsosceles()
         {
             if (IsEquilateral())
-            {
                 return false;
-            }
-
-            return angleA == angleB || angleB == angleC || angleC == angleA;
+            if (Angle1 == Angle2 || Angle1 == Angle3 || Angle2 == Angle3)
+                return true;
+            
+            return false;
         }
 
         internal bool IsScalene()
         {
-            return !(IsIsosceles()  || IsEquilateral());
+            return !IsEquilateral() && !IsIsosceles();
         }
+
+
     }
 }
