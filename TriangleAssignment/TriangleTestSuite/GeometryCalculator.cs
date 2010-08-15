@@ -56,27 +56,33 @@ namespace GeometricalObjects
             var area = CalculateArea(armSideOne, oppositeSide, armSideTwo);
 
             var height = GetHeight(area, baseSide);
-
+            double theAngle;
             if (baseSide == oppositeSide)
             {
-                var angle1 = GetAngleForSide(armSideTwo, height) * 100;
-                var angle2 = GetAngleForSide(armSideOne, height) * 100;
-                return 180d - angle1 - angle2;
+                var angle1 = GetAngleForSide(armSideOne, height) ;
+                var angle2 = GetAngleForSide(armSideTwo, height);
+                theAngle = 180d - angle1 - angle2;
             }
-            
-            if (baseSide == armSideTwo)
+            else
             {
-                return GetAngleForSide(armSideOne, height);
+                if (baseSide == armSideTwo)
+                {
+                    theAngle = GetAngleForSide(armSideOne, height);
+                }
+                else
+                {
+                    theAngle = GetAngleForSide(armSideTwo, height);
+                }
             }
             
-            return GetAngleForSide(armSideTwo, height);
+            
+            return Math.Round(theAngle, 7);
         }
 
         private double GetAngleForSide(double hypothenuse, double height)
         {
-            var tempSide = Math.Sqrt(hypothenuse * hypothenuse - height * height);
-            var cos = tempSide/hypothenuse;
-            return Math.Acos(cos);
+            var sin = height/hypothenuse;
+            return Math.Asin(sin)*180/Math.PI;
         }
 
 

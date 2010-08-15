@@ -50,8 +50,10 @@ namespace GeometricalObjects
         [Test]
         public void GetInternalAngle_PassTriangleVertices_ReturnInternalAngle()
         {
+            TestInternalAngle(new Point(0d, 0d), new Point(5d, 0d), new Point(0d, 5d), 90d);
+            TestInternalAngle(new Point(5d, 0d), new Point(0d, 5d), new Point(0d, 0d), 45d);
             TestInternalAngle(new Point(0d, 0d), new Point(3d, 0d), new Point(0d, 4d), 90d);
-            TestInternalAngle(new Point(5d,0d), new Point(0d,5d),new Point(0d,0d), 45d);
+            
         }
 
 
