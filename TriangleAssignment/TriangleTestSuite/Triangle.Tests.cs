@@ -41,6 +41,7 @@ namespace GeometricalObjects.Tests
             Assert.AreEqual(dummyPointA, result.Vertex1);
             Assert.AreEqual(dummyPointB, result.Vertex2);
             Assert.AreEqual(dummyPointC, result.Vertex3);
+
         }
 
         [Test]
@@ -111,6 +112,7 @@ namespace GeometricalObjects.Tests
 
             Assert.IsFalse(result.IsScalene());
         }
+
 
         ////[Test]
         ////[ExpectedException(typeof(ArgumentException), ExpectedMessage = "All internal angles must add up to 180 degrees")]

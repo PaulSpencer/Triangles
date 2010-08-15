@@ -10,8 +10,13 @@ namespace GeometricalObjects
     {
         bool IsAStraightLine(Point vertexOne, Point vertexTwo, Point thirdPoint);
 
-        double GetInternalAngle(Point firstPoint, Point secondPoint, Point thirdPoint);
+        double GetInternalAngle(Point anglePoint, Point secondPoint, Point thirdPoint);
 
+        double GetSide(Point vertexOne, Point vertexTwo);
+
+        double CalculateArea(double sideOne, double sideTwo, double sideThree);
+
+        double GetHeight(double area, double baseSide);
     }
 }
 
