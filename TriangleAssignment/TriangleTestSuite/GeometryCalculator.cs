@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 
 namespace GeometricalObjects
 {
@@ -56,27 +57,19 @@ namespace GeometricalObjects
             var area = CalculateArea(armSideOne, oppositeSide, armSideTwo);
 
             var height = GetHeight(area, baseSide);
-            double theAngle;
+            
+            var angle1 = GetAngleForSide(armSideOne, height) ;
+            var angle2 = GetAngleForSide(armSideTwo, height);
+            var angle3 = 180d - angle1 - angle2;
+            
             if (baseSide == oppositeSide)
-            {
-                var angle1 = GetAngleForSide(armSideOne, height) ;
-                var angle2 = GetAngleForSide(armSideTwo, height);
-                theAngle = 180d - angle1 - angle2;
-            }
-            else
-            {
-                if (baseSide == armSideTwo)
-                {
-                    theAngle = GetAngleForSide(armSideOne, height);
-                }
-                else
-                {
-                    theAngle = GetAngleForSide(armSideTwo, height);
-                }
-            }
+                return Math.Round(angle3, 7);
+            if (baseSide == armSideTwo)
+                return Math.Round(angle1, 7);
+            if (baseSide == armSideOne)
+                return Math.Round(angle2, 7);
             
-            
-            return Math.Round(theAngle, 7);
+            throw new ApplicationException();
         }
 
         private double GetAngleForSide(double hypothenuse, double height)
@@ -88,7 +81,6 @@ namespace GeometricalObjects
 
         public double GetSide(Point vertexOne, Point vertexTwo)
         {
-            double side;
             double changeInX = Math.Abs(vertexOne.X - vertexTwo.X);
             double changeInY = Math.Abs(vertexOne.Y - vertexTwo.Y);
 
