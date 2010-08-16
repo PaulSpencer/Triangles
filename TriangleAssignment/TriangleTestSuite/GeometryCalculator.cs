@@ -8,42 +8,27 @@ namespace GeometricalObjects
     {
         public bool IsAStraightLine(Point vertexOne, Point vertexTwo, Point vertexThree)
         {
+            if (TryBuildLine(vertexOne, vertexTwo, vertexThree))
+                return true;
+            if (TryBuildLine(vertexOne, vertexThree, vertexTwo))
+                return true;
+            if (TryBuildLine(vertexTwo, vertexThree, vertexOne))
+                return true;
 
-            double slope = 0;
-            double offset = 0;
+            return false;
+        }
 
+        private bool TryBuildLine(Point vertexOne, Point vertexTwo, Point vertexThree)
+        {
             if (vertexOne.X - vertexTwo.X != 0)
             {
-                slope = (vertexOne.Y - vertexTwo.Y) / (vertexOne.X - vertexTwo.X);
-                offset = vertexOne.X * slope - vertexOne.Y;
+                var slope = (vertexOne.Y - vertexTwo.Y) / (vertexOne.X - vertexTwo.X);
+                var offset = vertexOne.X * slope - vertexOne.Y;
 
                 if (vertexThree.Y == slope * vertexThree.X + offset)
                     return true;
-                return false;
             }
-
-            if (vertexOne.X - vertexThree.X != 0)
-            {
-                slope = (vertexOne.Y - vertexThree.Y) / (vertexOne.X - vertexThree.X);
-                offset = vertexOne.X * slope - vertexOne.Y;
-
-                if (vertexTwo.Y == slope * vertexTwo.X + offset)
-                    return true;
-                return false;
-            }
-
-
-            if (vertexTwo.X - vertexThree.X != 0)
-            {
-                slope = (vertexTwo.Y - vertexThree.Y) / (vertexTwo.X - vertexThree.X);
-                offset = vertexOne.X * slope - vertexOne.Y;
-
-                if (vertexOne.Y == slope * vertexOne.X + offset)
-                    return true;
-                return false;
-            }
-
-            return true;
+            return false;
         }
 
         public double GetInternalAngle(Point anglePoint, Point secondPoint, Point thirdPoint)
