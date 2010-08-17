@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Diagnostics.Contracts;
 
 namespace GeometricalObjects
 {
@@ -7,6 +8,9 @@ namespace GeometricalObjects
     {
         public bool IsAStraightLine(Point vertexOne, Point vertexTwo, Point vertexThree)
         {
+            Contract.Requires(vertexOne != null);
+            Contract.Requires(vertexTwo != null);
+            Contract.Requires(vertexThree != null);
 
             double slope = 0;
             double offset = 0;
@@ -47,6 +51,11 @@ namespace GeometricalObjects
 
         public double GetInternalAngle(Point anglePoint, Point secondPoint, Point thirdPoint)
         {
+            Contract.Requires(anglePoint != null);
+            Contract.Requires(secondPoint != null);
+            Contract.Requires(thirdPoint != null);
+            Contract.Ensures(0 < Contract.Result<double>()); 
+
             var armSideOne = GetSide(anglePoint, secondPoint);
             var oppositeSide = GetSide(secondPoint, thirdPoint);
             var armSideTwo = GetSide(thirdPoint, anglePoint);
@@ -88,7 +97,9 @@ namespace GeometricalObjects
 
         public double GetSide(Point vertexOne, Point vertexTwo)
         {
-            double side;
+            Contract.Requires(vertexOne != null);
+            Contract.Requires(vertexTwo != null);
+
             double changeInX = Math.Abs(vertexOne.X - vertexTwo.X);
             double changeInY = Math.Abs(vertexOne.Y - vertexTwo.Y);
 

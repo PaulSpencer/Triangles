@@ -9,6 +9,7 @@ namespace GeometricalObjects
 
         public Point(double x, double y)
         {
+            // contracts
             X = x;
             Y = y;
         }

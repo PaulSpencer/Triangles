@@ -8,7 +8,6 @@ namespace GeometricalObjects.Tests
     public class TriangleTestSuite
     {
         MockRepository mockRepository;
-        IGeometryCalculator stubGeometryCalculator;
         IGeometryCalculator mockGeometryCalculator;
         Point dummyPoint;
         Point dummyPointA;
@@ -21,11 +20,16 @@ namespace GeometricalObjects.Tests
             mockRepository = new MockRepository();
 
             mockGeometryCalculator = mockRepository.DynamicMock<IGeometryCalculator>();
-
             dummyPoint = new Point(1, 1);
             dummyPointA = new Point(1, 2);
             dummyPointB = new Point(2, 3);
             dummyPointC = new Point(3, 4);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            mockRepository.VerifyAll();
         }
 
         [Test]
@@ -37,11 +41,6 @@ namespace GeometricalObjects.Tests
             var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator);
             
             Assert.NotNull(result);
-
-            Assert.AreEqual(dummyPointA, result.Vertex1);
-            Assert.AreEqual(dummyPointB, result.Vertex2);
-            Assert.AreEqual(dummyPointC, result.Vertex3);
-
         }
 
         [Test]
@@ -69,7 +68,7 @@ namespace GeometricalObjects.Tests
             var result = SetTriangleAngles(60d, 70d, 50d);
             Assert.IsFalse(result.IsEquilateral());
         }
-
+        
         [Test]
         public void IsIsocolese_WhenAllAnglesEqual_ReturnsFalse()
         {
@@ -102,7 +101,7 @@ namespace GeometricalObjects.Tests
         public void IsScalene_WhenIsIscocolese_ReturnsFalse()
         {
             var result = SetTriangleAngles(40d, 70d, 70d);
-            Assert.AreEqual(result.IsScalene(), false);
+            Assert.AreEqual(result.IsScalene(), false); 
         }
 
         [Test]
@@ -113,21 +112,13 @@ namespace GeometricalObjects.Tests
             Assert.IsFalse(result.IsScalene());
         }
 
-
-        ////[Test]
-        ////[ExpectedException(typeof(ArgumentException), ExpectedMessage = "All internal angles must add up to 180 degrees")]
-        ////public void Constructor_InternalAnglesNotEqualTo180Degrees_ThrowException()
-        ////{
-        ////    var result = SetTriangleAngles(100d, 100d, 100d);
-        ////}
-
-        public Triangle SetTriangleAngles(double angleA, double angleB, double angleC)
+        private Triangle SetTriangleAngles(double angleA, double angleB, double angleC)
         {
             Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).Return(false);
             Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointA, dummyPointB, dummyPointC)).Return(angleA);
-            Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointB, dummyPointA, dummyPointC)).Return(angleB);
+            Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointB, dummyPointC, dummyPointA)).Return(angleB);
             Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointC, dummyPointA, dummyPointB)).Return(angleC);
-            
+
             mockRepository.ReplayAll();
 
             var triangle = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator);
@@ -137,6 +128,4 @@ namespace GeometricalObjects.Tests
             return triangle;
         }
     }
-
-
 }
