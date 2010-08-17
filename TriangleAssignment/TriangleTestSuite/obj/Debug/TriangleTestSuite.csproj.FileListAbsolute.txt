@@ -24,3 +24,10 @@ Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.xml
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\ResolveAssemblyReference.cache
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.dll
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.pdb
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.pdb
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.xml
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.xml
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.dll
+C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.pdb

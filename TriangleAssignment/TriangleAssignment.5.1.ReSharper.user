@@ -11,23 +11,16 @@
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Point.Tests.cs" caret="0" fromTop="0" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:IGeometryCalculator.cs" caret="280" fromTop="11" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryShapeFactory.cs" caret="479" fromTop="13" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.cs" caret="1552" fromTop="13" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="18" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Point.cs" caret="185" fromTop="8" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2437" fromTop="30" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="656" fromTop="20" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.cs" caret="0" fromTop="0" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2437" fromTop="22" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="334" fromTop="13" />
     </RecentFiles>
     <RecentEdits>
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="15" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="17" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="16" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:IGeometryCalculator.cs" caret="565" fromTop="38" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:IGeometryCalculator.cs" caret="565" fromTop="15" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:IGeometryCalculator.cs" caret="280" fromTop="11" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2864" fromTop="31" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="3393" fromTop="32" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="3680" fromTop="27" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="1475" fromTop="20" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="3232" fromTop="32" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="3519" fromTop="27" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="1107" fromTop="11" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="764" fromTop="3" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="9" />
@@ -35,19 +28,26 @@
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2604" fromTop="41" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2301" fromTop="37" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="33" fromTop="0" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2653" fromTop="33" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2653" fromTop="24" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="1756" fromTop="16" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2645" fromTop="33" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2612" fromTop="26" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2598" fromTop="24" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2518" fromTop="33" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2518" fromTop="24" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="1781" fromTop="16" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2510" fromTop="33" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="26" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="24" />
       <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2058" fromTop="21" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2643" fromTop="38" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="1980" fromTop="14" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2612" fromTop="31" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2598" fromTop="26" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2557" fromTop="31" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2744" fromTop="27" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2447" fromTop="38" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="31" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="26" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2609" fromTop="27" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="1301" fromTop="26" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2273" fromTop="6" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2273" fromTop="18" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2361" fromTop="24" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2414" fromTop="32" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2475" fromTop="25" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2195" fromTop="16" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2803" fromTop="3" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="1381" fromTop="0" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -67,7 +67,7 @@
       <Item value="Triangle`0" priority="0" />
       <Item value="Point`0" priority="7" />
       <Item value="IGeometryCalculator`0" priority="0" />
-      <Item value="return" priority="26" />
+      <Item value="return" priority="29" />
       <Item value="null" priority="2" />
       <Item value="this" priority="0" />
       <Item value="_geometry" priority="7" />
@@ -76,14 +76,14 @@
       <Item value="GeometryShapeFactory`0" priority="2" />
       <Item value="abstract" priority="0" />
       <Item value="Assert`0" priority="1" />
-      <Item value="if" priority="16" />
+      <Item value="if" priority="17" />
       <Item value="calculator" priority="1" />
       <Item value="point1" priority="1" />
       <Item value="point2" priority="1" />
-      <Item value="new" priority="12" />
+      <Item value="new" priority="13" />
       <Item value="Triangle" priority="0" />
       <Item value="point3" priority="0" />
-      <Item value="throw" priority="2" />
+      <Item value="throw" priority="3" />
       <Item value="ArgumentException" priority="2" />
       <Item value="bool" priority="0" />
       <Item value="mockRepository" priority="1" />
@@ -93,7 +93,7 @@
       <Item value="Angle3" priority="2" />
       <Item value="private" priority="0" />
       <Item value="double" priority="24" />
-      <Item value="angle2" priority="3" />
+      <Item value="angle2" priority="6" />
       <Item value="Vertex1" priority="1" />
       <Item value="Vertex2" priority="1" />
       <Item value="angle1" priority="5" />
@@ -102,7 +102,7 @@
       <Item value="IsIsosceles`0" priority="0" />
       <Item value="using" priority="1" />
       <Item value="System" priority="1" />
-      <Item value="Math`0" priority="8" />
+      <Item value="Math`0" priority="10" />
       <Item value="GetSide`0" priority="3" />
       <Item value="vertexOne" priority="0" />
       <Item value="vertexTwo" priority="1" />
@@ -146,10 +146,14 @@
       <Item value="height" priority="1" />
       <Item value="resultAngle" priority="0" />
       <Item value="angleForLongestSide" priority="0" />
-      <Item value="armSideOne" priority="1" />
+      <Item value="armSideOne" priority="2" />
       <Item value="oppositeSide" priority="2" />
       <Item value="else" priority="6" />
       <Item value="theAngle" priority="2" />
+      <Item value="angle3" priority="0" />
+      <Item value="base" priority="0" />
+      <Item value="AbandonedMutexException" priority="0" />
+      <Item value="ApplicationException`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:GeometricalObjects.IGeometryCalculator">
       <Item value="Equals`0" priority="0" />
@@ -193,7 +197,7 @@
       <Item value="PI" priority="0" />
       <Item value="Acos`0" priority="1" />
       <Item value="Cos`0" priority="0" />
-      <Item value="Round`0" priority="0" />
+      <Item value="Round`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Rhino.Mocks.MockRepository">
       <Item value="VerifyAll`0" priority="0" />
