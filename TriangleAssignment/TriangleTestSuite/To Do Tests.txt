@@ -1,3 +1,3 @@
 ﻿- Add a drawing component
-- Hide the dependancy of Triangle on IGeographyCalculator
- 
+- kill IGeometryCalculator
+- double precision in comparisons

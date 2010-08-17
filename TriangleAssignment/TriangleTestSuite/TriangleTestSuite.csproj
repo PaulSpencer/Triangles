@@ -39,19 +39,17 @@
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeometryCalculator.cs" />
     <Compile Include="GeometryCalculator.Tests.cs" />
     <Compile Include="GeometryShapeFactory.cs" />
+    <Compile Include="IDrawer.cs" />
     <Compile Include="IGeometryCalculator.cs" />
-    <Compile Include="Point.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="Triangle.Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Point.Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="To Do Tests.txt" />

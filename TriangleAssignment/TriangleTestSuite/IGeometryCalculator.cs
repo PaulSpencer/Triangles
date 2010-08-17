@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using GeometricalObjects;
+using System.Drawing;
 
 
 namespace GeometricalObjects

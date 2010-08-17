@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Linq;
 using System.Diagnostics.Contracts;
+using System.Drawing;
 
 namespace GeometricalObjects
 {
     class GeometryCalculator : IGeometryCalculator
     {
+        private const double SUM_INTERNAL_ANGLES = 180d;
+
         public bool IsAStraightLine(Point vertexOne, Point vertexTwo, Point vertexThree)
         {
             Contract.Requires(vertexOne != null);
@@ -54,7 +57,7 @@ namespace GeometricalObjects
             Contract.Requires(anglePoint != null);
             Contract.Requires(secondPoint != null);
             Contract.Requires(thirdPoint != null);
-            Contract.Ensures(0 < Contract.Result<double>()); 
+            Contract.Ensures(0d < Contract.Result<double>() && Contract.Result<double>() <= SUM_INTERNAL_ANGLES); 
 
             var armSideOne = GetSide(anglePoint, secondPoint);
             var oppositeSide = GetSide(secondPoint, thirdPoint);
@@ -70,20 +73,12 @@ namespace GeometricalObjects
             {
                 var angle1 = GetAngleForSide(armSideOne, height) ;
                 var angle2 = GetAngleForSide(armSideTwo, height);
-                theAngle = 180d - angle1 - angle2;
+                theAngle = SUM_INTERNAL_ANGLES - angle1 - angle2;
             }
             else
             {
-                if (baseSide == armSideTwo)
-                {
-                    theAngle = GetAngleForSide(armSideOne, height);
-                }
-                else
-                {
-                    theAngle = GetAngleForSide(armSideTwo, height);
-                }
-            }
-            
+                theAngle = baseSide == armSideTwo ?  GetAngleForSide(armSideOne, height) : GetAngleForSide(armSideTwo, height);
+            }            
             
             return Math.Round(theAngle, 7);
         }
@@ -91,7 +86,7 @@ namespace GeometricalObjects
         private double GetAngleForSide(double hypothenuse, double height)
         {
             var sin = height/hypothenuse;
-            return Math.Asin(sin)*180/Math.PI;
+            return Math.Asin(sin) * SUM_INTERNAL_ANGLES / Math.PI;
         }
 
 
@@ -108,6 +103,7 @@ namespace GeometricalObjects
                 return changeInY;
             }
 
+            // is this a bug? should it be change in Y? have we tested for this?
             if (changeInX == 0d)
             {
                 return changeInX;

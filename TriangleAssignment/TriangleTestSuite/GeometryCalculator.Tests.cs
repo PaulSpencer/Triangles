@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
+using System.Drawing;
 
 namespace GeometricalObjects
 {
@@ -10,11 +11,11 @@ namespace GeometricalObjects
     public class GeometryCalculatorTestSuite
     {
         [Test]
-        [TestCase(3.0, 4.0, 3.0, 6.0, 2.0)]
-        [TestCase(8.0, 4.0, 3.0, 4.0, 5.0)]
-        [TestCase(3.0, 4.0, 3.0, 4.0, 0.0)]
-        [TestCase(3.0, 4.0, 7.0, 7.0, 5.0)]
-        public void TestCalculator_TwoPointsOnThePlane_DistanceBetweenPoints(double vertex1x, double vertex1y, double vertex2x, double vertex2y, double expectedResult)
+        [TestCase(3, 4, 3, 6, 2)]
+        [TestCase(8, 4, 3, 4, 5)]
+        [TestCase(3, 4, 3, 4, 0)]
+        [TestCase(3, 4, 7, 7, 5)]
+        public void TestCalculator_TwoPointsOnThePlane_DistanceBetweenPoints(int vertex1x, int vertex1y, int vertex2x, int vertex2y, double expectedResult)
         {
             var vertex1 = new Point(vertex1x, vertex1y);
             var vertex2 = new Point(vertex2x, vertex2y);
@@ -24,8 +25,8 @@ namespace GeometricalObjects
         }
 
         [Test]
-        [TestCase(3.0, 4.0, 5.0, 6.0)]
-        public void CalculateArea_ThreeSides_TriangleArea(double sideOne, double sideTwo, double sideThree, double expectedResult)
+        [TestCase(3, 4, 5, 6)]
+        public void CalculateArea_ThreeSides_TriangleArea(int sideOne, int sideTwo, int sideThree, double expectedResult)
         {
             var result = new GeometryCalculator().CalculateArea(sideOne,sideTwo,sideThree);
             Assert.AreEqual(expectedResult, result);
@@ -50,9 +51,9 @@ namespace GeometricalObjects
         [Test]
         public void GetInternalAngle_PassTriangleVertices_ReturnInternalAngle()
         {
-            TestInternalAngle(new Point(0d, 0d), new Point(5d, 0d), new Point(0d, 5d), 90d);
-            TestInternalAngle(new Point(5d, 0d), new Point(0d, 5d), new Point(0d, 0d), 45d);
-            TestInternalAngle(new Point(0d, 0d), new Point(3d, 0d), new Point(0d, 4d), 90d);
+            TestInternalAngle(new Point(0, 0), new Point(5, 0), new Point(0, 5), 90d);
+            TestInternalAngle(new Point(5, 0), new Point(0, 5), new Point(0, 0), 45d);
+            TestInternalAngle(new Point(0, 0), new Point(3, 0), new Point(0, 4), 90d);
             
         }
 

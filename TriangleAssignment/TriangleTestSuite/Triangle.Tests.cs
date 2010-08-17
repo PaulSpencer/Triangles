@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using System;
 using Rhino.Mocks;
+using System.Drawing;
+using System.Collections.Generic;
 
 namespace GeometricalObjects.Tests
 {
@@ -9,6 +11,7 @@ namespace GeometricalObjects.Tests
     {
         MockRepository mockRepository;
         IGeometryCalculator mockGeometryCalculator;
+        IDrawer stubDrawer;
         Point dummyPoint;
         Point dummyPointA;
         Point dummyPointB;
@@ -20,6 +23,7 @@ namespace GeometricalObjects.Tests
             mockRepository = new MockRepository();
 
             mockGeometryCalculator = mockRepository.DynamicMock<IGeometryCalculator>();
+            stubDrawer = mockRepository.Stub<IDrawer>();
             dummyPoint = new Point(1, 1);
             dummyPointA = new Point(1, 2);
             dummyPointB = new Point(2, 3);
@@ -38,7 +42,7 @@ namespace GeometricalObjects.Tests
             Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).IgnoreArguments().Return(false);
             mockRepository.ReplayAll();
 
-            var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator);
+            var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, stubDrawer);
             
             Assert.NotNull(result);
         }
@@ -50,7 +54,7 @@ namespace GeometricalObjects.Tests
             Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).IgnoreArguments().Return(true);
             mockRepository.ReplayAll();
 
-            var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator);
+            var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, stubDrawer);
         }
 
 
@@ -121,11 +125,23 @@ namespace GeometricalObjects.Tests
 
             mockRepository.ReplayAll();
 
-            var triangle = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator);
+            var triangle = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, stubDrawer);
 
             Assert.NotNull(triangle);
 
             return triangle;
+        }
+
+        [Test]
+        public void Render_WhenCalled_PassesPointsToDrawPolygon()
+        {
+            IDrawer mockDrawer = mockRepository.StrictMock<IDrawer>();
+            List<Point> points = new List<Point>() { dummyPointA, dummyPointB, dummyPointC};
+            mockDrawer.Expect(x => x.DrawPolygon(points));
+
+            mockRepository.ReplayAll();
+            var triangle = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, mockDrawer);
+            triangle.Render();
         }
     }
 }
