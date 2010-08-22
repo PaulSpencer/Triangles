@@ -3,3 +3,8 @@ C:\Projects\Triangles\TriangleAssignment\Triangle\bin\Debug\Triangle.pdb
 C:\Projects\Triangles\TriangleAssignment\Triangle\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.dll
 C:\Projects\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\bin\Debug\Triangle.dll
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\bin\Debug\Triangle.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.dll
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.pdb

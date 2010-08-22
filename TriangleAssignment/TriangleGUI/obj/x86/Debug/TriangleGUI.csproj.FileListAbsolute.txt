@@ -9,3 +9,14 @@ C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.p
 C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.MainForm.resources
 C:\Projects\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.dll
 C:\Projects\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.exe
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.exe
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.dll
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.pdb
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.MainForm.resources
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.Properties.Resources.resources
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.write.1.tlog
