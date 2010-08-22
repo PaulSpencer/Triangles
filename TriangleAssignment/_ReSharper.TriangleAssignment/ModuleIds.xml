@@ -1,3 +1,5 @@
 <Modules>
   <Module PersistentId="626D6C0C-F25A-466F-B698-EC995FC95BC2" ModuleId="TriangleTestSuite" />
+  <Module PersistentId="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C" ModuleId="Triangle" />
+  <Module PersistentId="7CAFDA4F-FD87-4EAE-ABAF-4FE96549D6AE" ModuleId="TriangleGUI" />
 </Modules>

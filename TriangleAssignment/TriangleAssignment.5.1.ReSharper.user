@@ -3,51 +3,51 @@
     <string />
     <integer />
     <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Point.Tests.cs" caret="0" fromTop="0" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:IGeometryCalculator.cs" caret="280" fromTop="11" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryShapeFactory.cs" caret="479" fromTop="13" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="18" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Point.cs" caret="185" fromTop="8" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.cs" caret="0" fromTop="0" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2437" fromTop="22" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="334" fromTop="13" />
+      <File id="7CAFDA4F-FD87-4EAE-ABAF-4FE96549D6AE/f:MainForm.Designer.cs" caret="8703" fromTop="140" />
+      <File id="7CAFDA4F-FD87-4EAE-ABAF-4FE96549D6AE/f:MainForm.cs" caret="1089" fromTop="1" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Point.Extensions.cs" caret="2347" fromTop="33" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:To Do Tests.txt" caret="299" fromTop="6" />
+      <File id="7CAFDA4F-FD87-4EAE-ABAF-4FE96549D6AE/f:TriangleMain.cs" caret="505" fromTop="13" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="1505" fromTop="7" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4559" fromTop="131" />
     </RecentFiles>
     <RecentEdits>
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:IGeometryCalculator.cs" caret="280" fromTop="11" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="3232" fromTop="32" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="3519" fromTop="27" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="1107" fromTop="11" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="764" fromTop="3" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3745" fromTop="9" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="1865" fromTop="29" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2604" fromTop="41" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2301" fromTop="37" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="33" fromTop="0" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2518" fromTop="33" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2518" fromTop="24" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="1781" fromTop="16" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2510" fromTop="33" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="26" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="24" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="2058" fromTop="21" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2447" fromTop="38" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="31" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2402" fromTop="26" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2609" fromTop="27" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.Tests.cs" caret="1301" fromTop="26" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2273" fromTop="6" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2273" fromTop="18" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2361" fromTop="24" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2414" fromTop="32" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2475" fromTop="25" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2195" fromTop="16" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="2803" fromTop="3" />
-      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:GeometryCalculator.cs" caret="1381" fromTop="0" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="5276" fromTop="10" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="2215" fromTop="24" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="1757" fromTop="15" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="1302" fromTop="21" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="3780" fromTop="19" />
+      <File id="1CC876C5-5CF0-43DE-BAAF-BE243FCE1B6C/f:Triangle.cs" caret="521" fromTop="14" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="822" fromTop="24" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="918" fromTop="26" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="2368" fromTop="20" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="1781" fromTop="4" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="2121" fromTop="16" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="2042" fromTop="12" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="2501" fromTop="4" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="2820" fromTop="17" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3106" fromTop="20" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3199" fromTop="11" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3413" fromTop="15" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3794" fromTop="23" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3806" fromTop="16" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4105" fromTop="24" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="3796" fromTop="15" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4890" fromTop="23" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4890" fromTop="22" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4890" fromTop="13" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4888" fromTop="22" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4893" fromTop="11" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4257" fromTop="31" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4257" fromTop="33" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4630" fromTop="31" />
+      <File id="626D6C0C-F25A-466F-B698-EC995FC95BC2/f:Triangle.Tests.cs" caret="4630" fromTop="31" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -62,45 +62,45 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="1" />
-      <Item value="static" priority="0" />
+      <Item value="public" priority="3" />
+      <Item value="static" priority="1" />
       <Item value="Triangle`0" priority="0" />
-      <Item value="Point`0" priority="7" />
+      <Item value="Point`0" priority="18" />
       <Item value="IGeometryCalculator`0" priority="0" />
-      <Item value="return" priority="29" />
+      <Item value="return" priority="36" />
       <Item value="null" priority="2" />
-      <Item value="this" priority="0" />
+      <Item value="this" priority="2" />
       <Item value="_geometry" priority="7" />
-      <Item value="triangle" priority="2" />
-      <Item value="false" priority="3" />
+      <Item value="triangle" priority="5" />
+      <Item value="false" priority="4" />
       <Item value="GeometryShapeFactory`0" priority="2" />
       <Item value="abstract" priority="0" />
       <Item value="Assert`0" priority="1" />
-      <Item value="if" priority="17" />
+      <Item value="if" priority="26" />
       <Item value="calculator" priority="1" />
-      <Item value="point1" priority="1" />
+      <Item value="point1" priority="2" />
       <Item value="point2" priority="1" />
-      <Item value="new" priority="13" />
-      <Item value="Triangle" priority="0" />
-      <Item value="point3" priority="0" />
-      <Item value="throw" priority="3" />
+      <Item value="new" priority="23" />
+      <Item value="Triangle" priority="3" />
+      <Item value="point3" priority="1" />
+      <Item value="throw" priority="5" />
       <Item value="ArgumentException" priority="2" />
-      <Item value="bool" priority="0" />
+      <Item value="bool" priority="2" />
       <Item value="mockRepository" priority="1" />
       <Item value="Angle1" priority="1" />
       <Item value="geometry" priority="0" />
       <Item value="Angle2" priority="2" />
       <Item value="Angle3" priority="2" />
       <Item value="private" priority="0" />
-      <Item value="double" priority="24" />
-      <Item value="angle2" priority="6" />
+      <Item value="double" priority="30" />
+      <Item value="angle2" priority="9" />
       <Item value="Vertex1" priority="1" />
       <Item value="Vertex2" priority="1" />
-      <Item value="angle1" priority="5" />
-      <Item value="true" priority="1" />
+      <Item value="angle1" priority="6" />
+      <Item value="true" priority="3" />
       <Item value="IsEquilateral`0" priority="0" />
       <Item value="IsIsosceles`0" priority="0" />
-      <Item value="using" priority="1" />
+      <Item value="using" priority="3" />
       <Item value="System" priority="1" />
       <Item value="Math`0" priority="10" />
       <Item value="GetSide`0" priority="3" />
@@ -108,12 +108,12 @@
       <Item value="vertexTwo" priority="1" />
       <Item value="changeInY" priority="3" />
       <Item value="GeometryCalculator`0" priority="2" />
-      <Item value="Point" priority="6" />
+      <Item value="Point" priority="12" />
       <Item value="vertex1" priority="0" />
       <Item value="vertex2" priority="0" />
       <Item value="side" priority="0" />
       <Item value="thr" priority="0" />
-      <Item value="TestCaseData`0" priority="1" />
+      <Item value="TestCaseData`0" priority="2" />
       <Item value="changeInX" priority="1" />
       <Item value="mockGeometryCalculator" priority="0" />
       <Item value="MockRepository`0" priority="0" />
@@ -123,9 +123,9 @@
       <Item value="sideThree" priority="0" />
       <Item value="result" priority="0" />
       <Item value="area" priority="3" />
-      <Item value="baseSide" priority="3" />
-      <Item value="ExpectedExceptionAttribute`0" priority="0" />
-      <Item value="typeof" priority="0" />
+      <Item value="baseSide" priority="5" />
+      <Item value="ExpectedExceptionAttribute`0" priority="1" />
+      <Item value="typeof" priority="1" />
       <Item value="ArgumentException`0" priority="0" />
       <Item value="ExpectedMessage" priority="0" />
       <Item value="vertexOfInternalAngle" priority="0" />
@@ -134,7 +134,7 @@
       <Item value="firstPoint" priority="1" />
       <Item value="secondPoint" priority="1" />
       <Item value="thirdPoint" priority="1" />
-      <Item value="var" priority="10" />
+      <Item value="var" priority="12" />
       <Item value="sideBC" priority="2" />
       <Item value="sideCA" priority="2" />
       <Item value="sideAB" priority="5" />
@@ -146,14 +146,47 @@
       <Item value="height" priority="1" />
       <Item value="resultAngle" priority="0" />
       <Item value="angleForLongestSide" priority="0" />
-      <Item value="armSideOne" priority="2" />
-      <Item value="oppositeSide" priority="2" />
+      <Item value="armSideOne" priority="3" />
+      <Item value="oppositeSide" priority="3" />
       <Item value="else" priority="6" />
-      <Item value="theAngle" priority="2" />
-      <Item value="angle3" priority="0" />
+      <Item value="theAngle" priority="3" />
+      <Item value="angle3" priority="2" />
       <Item value="base" priority="0" />
       <Item value="AbandonedMutexException" priority="0" />
       <Item value="ApplicationException`0" priority="0" />
+      <Item value="armSideTwo" priority="2" />
+      <Item value="offset" priority="0" />
+      <Item value="ROUNDING_ACCURACY" priority="2" />
+      <Item value="IDrawer`0" priority="0" />
+      <Item value="PointExtensions`0" priority="0" />
+      <Item value="GeometricalObjects" priority="1" />
+      <Item value="ApplicationException" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="NotImplementedException" priority="0" />
+      <Item value="int" priority="6" />
+      <Item value="outputDevice" priority="0" />
+      <Item value="Pen" priority="0" />
+      <Item value="Brush`0" priority="0" />
+      <Item value="Color`0" priority="1" />
+      <Item value="textBox1" priority="1" />
+      <Item value="coordinates" priority="1" />
+      <Item value="char" priority="2" />
+      <Item value="foreach" priority="0" />
+      <Item value="point" priority="0" />
+      <Item value="vertex" priority="3" />
+      <Item value="coords" priority="1" />
+      <Item value="Refresh`0" priority="0" />
+      <Item value="isScaleneLbl" priority="1" />
+      <Item value="string" priority="2" />
+      <Item value="isIsolescenesLbl" priority="1" />
+      <Item value="isEquilateralLbl" priority="1" />
+      <Item value="IsAccessible" priority="0" />
+      <Item value="splitContainer1" priority="0" />
+      <Item value="side2" priority="3" />
+      <Item value="Object`0" priority="0" />
+      <Item value="side1" priority="1" />
+      <Item value="side3" priority="3" />
+      <Item value="GetInternalAngle`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:GeometricalObjects.IGeometryCalculator">
       <Item value="Equals`0" priority="0" />
@@ -167,8 +200,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
       <Item value="NotNull`0" priority="1" />
-      <Item value="AreEqual`0" priority="1" />
+      <Item value="AreEqual`0" priority="2" />
       <Item value="IsFalse`0" priority="0" />
+      <Item value="IsTrue`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:GeometricalObjects.TriangleGeometryCalculator">
       <Item value="IsTriangleShape`0" priority="1" />
@@ -197,10 +231,46 @@
       <Item value="PI" priority="0" />
       <Item value="Acos`0" priority="1" />
       <Item value="Cos`0" priority="0" />
-      <Item value="Round`0" priority="2" />
+      <Item value="Round`0" priority="9" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Rhino.Mocks.MockRepository">
       <Item value="VerifyAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="GetLineLength`0" priority="6" />
+      <Item value="AreOnTheSameLine`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Red" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Split`0" priority="1" />
+      <Item value="ToCharArray`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="0" />
+      <Item value="Empty" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:GeometricalObjects.Triangle">
+      <Item value="IsScalene`0" priority="2" />
+      <Item value="IsIsosceles`0" priority="1" />
+      <Item value="side2" priority="0" />
+      <Item value="IsEquilateral`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SplitContainer">
+      <Item value="Panel2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SplitterPanel">
+      <Item value="CreateGraphics`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
