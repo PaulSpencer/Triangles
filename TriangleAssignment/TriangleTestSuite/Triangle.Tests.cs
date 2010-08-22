@@ -1,147 +1,142 @@
 ﻿using NUnit.Framework;
+
 using System;
-using Rhino.Mocks;
 using System.Drawing;
-using System.Collections.Generic;
+using GeometricalObjects;
 
 namespace GeometricalObjects.Tests
 {
     [TestFixture]
     public class TriangleTestSuite
     {
-        MockRepository mockRepository;
-        IGeometryCalculator mockGeometryCalculator;
-        IDrawer stubDrawer;
-        Point dummyPoint;
-        Point dummyPointA;
-        Point dummyPointB;
-        Point dummyPointC;
-
-        [SetUp]
-        public void SetUp()
+        [Test]
+        [TestCase(3, 0, 0, 3)]
+        public void Constructor_ThreePointsOnThePlane_ReturnsTriangle(int point1x, int point1y, int point2x, int point2y)
         {
-            mockRepository = new MockRepository();
+            var origin = new Point(0,0);
+            var point1 = new Point(point1x, point1y);
+            var point2 = new Point(point2x, point2y);
 
-            mockGeometryCalculator = mockRepository.DynamicMock<IGeometryCalculator>();
-            stubDrawer = mockRepository.Stub<IDrawer>();
-            dummyPoint = new Point(1, 1);
-            dummyPointA = new Point(1, 2);
-            dummyPointB = new Point(2, 3);
-            dummyPointC = new Point(3, 4);
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            mockRepository.VerifyAll();
+            new Triangle(origin, point1, point2);
         }
 
         [Test]
-        public void Constructor_ThreePointsOnThePlane_ReturnsTriangle()
+        [TestCase(3, 4, 5)]
+        public void Constructor_WithThreeProperSides_ProperTriangle(double side1, double side2, double side3)
         {
-            Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).IgnoreArguments().Return(false);
-            mockRepository.ReplayAll();
-
-            var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, stubDrawer);
-            
-            Assert.NotNull(result);
+            new Triangle(side1, side2, side3);
         }
 
         [Test]
+        [TestCase(3, 4, 8)]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Constructor_WithInvalidSideInput_ThrowsException(double side1, double side2, double side3)
+        {
+            new Triangle(side1, side2, side3);
+        }
+
+        [Test]
+        [TestCase(3, 3, 6, 6)]
         [ExpectedException(typeof(ArgumentException), ExpectedMessage = "Can't have 3 points on same line")]
-        public void Constructor_InAStraightLine_ThrowsArgumentException()
+        public void Constructor_InAStraightLine_ThrowsArgumentException(int point1x, int point1y, int point2x, int point2y)
         {
-            Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).IgnoreArguments().Return(true);
-            mockRepository.ReplayAll();
+            var origin = new Point(0, 0);
+            var point1 = new Point(point1x, point1y);
+            var point2 = new Point(point2x, point2y);
 
-            var result = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, stubDrawer);
-        }
-
-
-        [Test]
-        public void IsEquilateral_WhenAllAnglesEqual_ReturnsTrue()
-        {
-            var result = SetTriangleAngles(60d, 60d, 60d);
-
-            Assert.IsTrue(result.IsEquilateral());
+            new Triangle(origin, point1, point2);
         }
 
         [Test]
-        public void IsEquilateral_WhenNotAllAnglesEqual_ReturnsFalse()
+        [TestCase(0, 3, 3, 0)]
+        public void IsEquilateral_DifferentAngles_ReturnsFalse(int point1x, int point1y, int point2x, int point2y)
         {
-            var result = SetTriangleAngles(60d, 70d, 50d);
+            var origin = new Point(0, 0);
+            var point1 = new Point(point1x, point1y);
+            var point2 = new Point(point2x, point2y);
+
+            var result = new Triangle(origin, point1, point2);
+
             Assert.IsFalse(result.IsEquilateral());
         }
-        
+
         [Test]
-        public void IsIsocolese_WhenAllAnglesEqual_ReturnsFalse()
+        [TestCase(2,2,2)]
+        public void IsEquilateral_WhenAllSidesEqual_ReturnsTrue(double side1, double side2, double side3)
         {
-            var result = SetTriangleAngles(60d, 60d, 60d);
-            Assert.IsFalse(result.IsIsosceles());
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.IsTrue(triangle.IsEquilateral());
         }
 
         [Test]
-        public void IsIsocolese_WhenTwoAnglesEqualButNotThree_ReturnsTrue()
+        [TestCase(2, 2, 3)]
+        [TestCase(2, 3, 2)]
+        [TestCase(3, 2, 2)]
+        [TestCase(4, 2, 3)]
+        public void IsEquilateral_WhenSidesNotEqual_ReturnsFalse(double side1, double side2, double side3)
         {
-            var result = SetTriangleAngles(40d, 70d, 70d);
-            Assert.IsTrue(result.IsIsosceles());
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.IsFalse(triangle.IsEquilateral());
         }
 
         [Test]
-        public void IsIsocolese_WhenNoSidesEqual_ReturnsFalse()
+        [TestCase(2, 4, 3)]
+        [TestCase(18, 44, 30)]
+        [TestCase(5, 8, 7)]
+        public void IsIsocolese_WhenNoSidesEqual_ReturnsFalse(double side1, double side2, double side3)
         {
-            var result = SetTriangleAngles(40d, 60d, 80d);
-            Assert.IsFalse(result.IsIsosceles());
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.IsFalse(triangle.IsIsosceles());
         }
 
         [Test]
-        public void IsScalene_WhenNoSidesEqual_ReturnsTrue()
+        [TestCase(2, 4, 4)]
+        [TestCase(5, 5, 3)]
+        [TestCase(8, 8, 7)]
+        public void IsIsocolese_WhenTwoSidesEqual_ReturnsTrue(double side1, double side2, double side3)
         {
-            var result = SetTriangleAngles(40d, 60d, 80d);
-            Assert.IsTrue(result.IsScalene());
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.IsTrue(triangle.IsIsosceles());
         }
 
         [Test]
-        public void IsScalene_WhenIsIscocolese_ReturnsFalse()
+        [TestCase(2, 4, 3)]
+        [TestCase(18, 44, 30)]
+        [TestCase(5, 8, 7)]
+        public void IsScalene_WhenNoSidesEqual_ReturnsTrue(double side1, double side2, double side3)
         {
-            var result = SetTriangleAngles(40d, 70d, 70d);
-            Assert.AreEqual(result.IsScalene(), false); 
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.IsTrue(triangle.IsScalene());
         }
 
         [Test]
-        public void IsScalene_WhenIsEquilateral_ReturnsFalse()
+        [TestCase(4, 4, 3)]
+        [TestCase(18, 44, 44)]
+        [TestCase(7, 8, 7)]
+        public void IsScalene_WhenSidesEqual_ReturnsFalse(double side1, double side2, double side3)
         {
-            var result = SetTriangleAngles(60d, 60d, 60d);
-
-            Assert.IsFalse(result.IsScalene());
-        }
-
-        private Triangle SetTriangleAngles(double angleA, double angleB, double angleC)
-        {
-            Expect.Call(mockGeometryCalculator.IsAStraightLine(dummyPointA, dummyPointB, dummyPointC)).Return(false);
-            Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointA, dummyPointB, dummyPointC)).Return(angleA);
-            Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointB, dummyPointC, dummyPointA)).Return(angleB);
-            Expect.Call(mockGeometryCalculator.GetInternalAngle(dummyPointC, dummyPointA, dummyPointB)).Return(angleC);
-
-            mockRepository.ReplayAll();
-
-            var triangle = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, stubDrawer);
-
-            Assert.NotNull(triangle);
-
-            return triangle;
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.IsFalse(triangle.IsScalene());
         }
 
         [Test]
-        public void Render_WhenCalled_PassesPointsToDrawPolygon()
+        [TestCase(2, 4, 3)]
+        [TestCase(18, 44, 30)]
+        [TestCase(5, 8, 7)]
+        public void IsScalene_WhenIsIscocolese_ReturnsFalse(double side1, double side2, double side3)
         {
-            IDrawer mockDrawer = mockRepository.StrictMock<IDrawer>();
-            List<Point> points = new List<Point>() { dummyPointA, dummyPointB, dummyPointC};
-            mockDrawer.Expect(x => x.DrawPolygon(points));
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.AreEqual(triangle.IsScalene(), !triangle.IsIsosceles());
+        }
 
-            mockRepository.ReplayAll();
-            var triangle = GeometryShapeFactory.CreateTriangle(dummyPointA, dummyPointB, dummyPointC, mockGeometryCalculator, mockDrawer);
-            triangle.Render();
+        [Test]
+        [TestCase(2, 4, 3)]
+        [TestCase(18, 44, 30)]
+        [TestCase(5, 8, 7)]
+        public void IsScalene_WhenIsEquilateral_ReturnsFalse(double side1, double side2, double side3)
+        {
+            var triangle = new Triangle(side1, side2, side3);
+            Assert.AreEqual(triangle.IsScalene(), !triangle.IsEquilateral());
         }
     }
 }

@@ -1,3 +1,8 @@
 ﻿- Add a drawing component
 - kill IGeometryCalculator
 - double precision in comparisons
+
+Issues:
+
+* Points are not the intrinsic characteristic of a triangles: lengths of sides are.
+* If you are providing the sides of a triangle: the sum of any two sides should be greater than the third side.

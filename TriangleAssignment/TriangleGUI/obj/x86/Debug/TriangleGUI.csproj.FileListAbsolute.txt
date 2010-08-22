@@ -1,0 +1,11 @@
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.Properties.Resources.resources
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.exe
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.pdb
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.exe
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.pdb
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.MainForm.resources
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.dll
+C:\Projects\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.pdb
