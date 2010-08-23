@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 using System.Drawing;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace GeometricalObjects
@@ -15,32 +14,56 @@ namespace GeometricalObjects
         private double angle23;
         private double angle31;
         
-        private double side1;
-        private double side2;
-        private double side3;
+        private readonly double side1;
+        private readonly double side2;
+        private readonly double side3;
 
-        public Triangle(Point point1, Point point2, Point point3)
-        {
-            Contract.Requires(point1 != null && point2 != null && point3 != null);
-            Contract.Ensures(Math.Round(angle12 + angle23 + angle31, ROUNDING_ACCURACY) == SUM_INTERNAL_ANGLES);
+        #region Construction with Points
+        
+        //private Point point1;
+        //private Point point2;
+        //private Point point3;
 
-            if (point1.AreOnTheSameLine(point2, point3))
-            {
-                throw new ArgumentException("Can't have 3 points on same line");
-            }
+        //public Triangle(Point point1, Point point2, Point point3)
+        //{
+        //    Contract.Requires(point1 != null && point2 != null && point3 != null);
+        //    Contract.Ensures(Math.Round(angle12 + angle23 + angle31, ROUNDING_ACCURACY) == SUM_INTERNAL_ANGLES);
 
-            this.side1 = point1.GetLineLength(point2);
-            this.side2 = point2.GetLineLength(point3);
-            this.side3 = point3.GetLineLength(point1);
+        //    if (point1.AreOnTheSameLine(point2, point3))
+        //    {
+        //        throw new ArgumentException("Can't have 3 points on same line");
+        //    }
 
-            InitialiseAngles();
-        }
+        //    this.point1 = point1;
+        //    this.point2 = point2;
+        //    this.point3 = point3;
+
+        //    this.side1 = point1.GetLineLength(point2);
+        //    this.side2 = point2.GetLineLength(point3);
+        //    this.side3 = point3.GetLineLength(point1);
+
+        //    InitializeAngles();
+        //} 
+        
+        //private double GetInternalAngle(Point anglePoint, Point secondPoint, Point thirdPoint)
+        //{
+        //    Contract.Requires(anglePoint != null);
+        //    Contract.Requires(secondPoint != null);
+        //    Contract.Requires(thirdPoint != null);
+
+        //    double side1 = anglePoint.GetLineLength(secondPoint);
+        //    double oppositeSide = secondPoint.GetLineLength( thirdPoint);
+        //    double side2 = thirdPoint.GetLineLength(anglePoint);
+
+        //    return GetInternalAngle(side1, side2, oppositeSide);
+        //}
+
+        #endregion
 
         public Triangle(double side1, double side2, double side3)
         {
             Contract.Requires(0 < side1 && 0 < side2 && 0 < side3);
-            Contract.Ensures(Math.Round(angle12 + angle23 + angle31, ROUNDING_ACCURACY) == SUM_INTERNAL_ANGLES);
-
+            
             if (side1+side2<=side3 || side1+side3<=side2 || side2+side3<=side1)
             {
                 throw new ArgumentException("Invalid Triangle: sum of two sides cannot be less than the third side!");
@@ -50,39 +73,73 @@ namespace GeometricalObjects
             this.side2 = side2;
             this.side3 = side3;
 
-            InitialiseAngles();
+            InitializeAngles();
         }
 
-        private void InitialiseAngles()
+        private void InitializeAngles()
         {
             angle12 = GetInternalAngle(this.side1, this.side2, this.side3);
             angle23 = GetInternalAngle(this.side2, this.side3, this.side1);
             angle31 = GetInternalAngle(this.side1, this.side3, this.side2);
         }
 
-        private double GetInternalAngle(double armSideOne, double armSideTwo, double oppositeSide)
+        private double Height
+        {
+            get
+            {
+                Contract.Ensures(Contract.Result<double>() > 0);
+
+                return 2d*Area/GetMaxSide();
+            }
+        }
+
+        private double Area
+        {
+            get
+            {
+                Contract.Ensures(Contract.Result<double>() > 0);
+                double p = 0.5*(side1 + side2 + side3);
+                double result = Math.Sqrt(p*(p - side1)*(p - side2)*(p - side3));
+                return result;
+            }
+        }
+
+        [ContractInvariantMethod]
+        private void TriangleInvariants()
+        {
+            Contract.Invariant(Math.Round(angle12 + angle23 + angle31, ROUNDING_ACCURACY) == SUM_INTERNAL_ANGLES);
+        }
+
+        private double GetInternalAngle(double side1, double side2, double oppositeSide)
         {
             Contract.Ensures(0d < Contract.Result<double>() && Contract.Result<double>() <= SUM_INTERNAL_ANGLES);
 
-            var baseSide = new[] { armSideOne, oppositeSide, armSideTwo }.Max();
+            var baseSide = GetMaxSide();
 
-            var area = Area(armSideOne, oppositeSide, armSideTwo);
+            var height = Height;
 
-            var height = Height(area, baseSide);
-
-            var angle1 = GetAngleForSide(armSideOne, height);
-            var angle2 = GetAngleForSide(armSideTwo, height);
+            var angle1 = GetAngleForSide(side1, height);
+            var angle2 = GetAngleForSide(side2, height);
             var angle3 = Math.Round(SUM_INTERNAL_ANGLES - angle1 - angle2, ROUNDING_ACCURACY);
-
 
             if (baseSide == oppositeSide)
                 return angle3;
-            if (baseSide == armSideTwo)
+            if (baseSide == side2)
                 return angle1;
-            if (baseSide == armSideOne)
+            if (baseSide == side1)
                 return angle2;
 
             throw new ApplicationException();
+        }
+
+        private double GetMaxSide()
+        {
+            return new[] { side1, side2, side3 }.Max();
+        }
+
+        private double GetMinSide()
+        {
+            return new[] { side1, side2, side3 }.Min();
         }
 
         public bool IsEquilateral()
@@ -95,10 +152,8 @@ namespace GeometricalObjects
         {
             if (IsEquilateral())
                 return false;
-            if (angle12 == angle23 || angle12 == angle31 || angle23 == angle31)
-                return true;
             
-            return false;
+            return (angle12 == angle23 || angle12 == angle31 || angle23 == angle31);
         }
 
         public bool IsScalene()
@@ -108,45 +163,32 @@ namespace GeometricalObjects
 
         private double GetAngleForSide(double hypothenuse, double height)
         {
+            Contract.Ensures(Contract.Result<double>() > 0);
+            
             var sin = height / hypothenuse;
             return Math.Round((Math.Asin(sin) * SUM_INTERNAL_ANGLES / Math.PI), ROUNDING_ACCURACY);
         }
 
-        // Jamie's Comment - you are not getting the height, you are calculating it.
-        // Still not sure about these methods.  Surely triangle should have a method
-        // height() - the calling doesn't care how it's calculated...  Don't reveal your
-        // imlpementation in the name.
-        private double Height(double area, double baseSide)
+        public void Render(Graphics graphics)
         {
-            Contract.Requires(0 < area);
-            Contract.Requires(0 < baseSide);
+            var clipBounds = graphics.VisibleClipBounds;
 
-            return 2d * area / baseSide;
+            double shorterSide = GetMinSide();
+            double baseSide = GetMaxSide();
+
+            var offset = (int)Math.Sqrt(shorterSide * shorterSide - Height * Height);
+
+            int originX = (int)((int)(clipBounds.Width / 2) - baseSide/2);
+            int originY = (int)((int)(clipBounds.Height / 2) - Height/2);
+            
+            var vertex1 = new Point(originX, originY);
+            var vertex2 = new Point(originX + (int)baseSide, originY);
+            var vertex3 = new Point(offset+originX, (int)Height + originY);
+
+            graphics.DrawPolygon(new Pen(Color.RoyalBlue), new[] { vertex1, vertex2, vertex3 });
+
         }
 
-        private double Area(double sideOne, double sideTwo, double sideThree)
-        {
-            double p = 0.5 * (sideOne + sideTwo + sideThree);
-            double result = Math.Sqrt(p * (p - sideOne) * (p - sideTwo) * (p - sideThree));
-            return result;
-        }
-
-        private double GetInternalAngle(Point anglePoint, Point secondPoint, Point thirdPoint)
-        {
-            Contract.Requires(anglePoint != null);
-            Contract.Requires(secondPoint != null);
-            Contract.Requires(thirdPoint != null);
-            // Jamie's Comment: that does this mean?  Refactor into a method that explains this.
-
-            double armSideOne = anglePoint.GetLineLength(secondPoint);
-            double oppositeSide = secondPoint.GetLineLength( thirdPoint);
-            double armSideTwo = thirdPoint.GetLineLength(anglePoint);
-
-            return GetInternalAngle(armSideOne, armSideTwo, oppositeSide);
-        }
-
-        public void Render()
-        {
-        }
+        
     }
 }

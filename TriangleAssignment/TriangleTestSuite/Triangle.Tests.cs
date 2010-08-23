@@ -9,16 +9,45 @@ namespace GeometricalObjects.Tests
     [TestFixture]
     public class TriangleTestSuite
     {
-        [Test]
-        [TestCase(3, 0, 0, 3)]
-        public void Constructor_ThreePointsOnThePlane_ReturnsTriangle(int point1x, int point1y, int point2x, int point2y)
-        {
-            var origin = new Point(0,0);
-            var point1 = new Point(point1x, point1y);
-            var point2 = new Point(point2x, point2y);
+        #region Unit-tests: Ctor with Points
 
-            new Triangle(origin, point1, point2);
-        }
+        //[Test]
+        //[TestCase(3, 0, 0, 3)]
+        //public void Constructor_ThreePointsOnThePlane_ReturnsTriangle(int point1x, int point1y, int point2x, int point2y)
+        //{
+        //    var origin = new Point(0, 0);
+        //    var point1 = new Point(point1x, point1y);
+        //    var point2 = new Point(point2x, point2y);
+
+        //    new Triangle(origin, point1, point2);
+        //}
+
+        //[Test]
+        //[TestCase(3, 3, 6, 6)]
+        //[ExpectedException(typeof(ArgumentException), ExpectedMessage = "Can't have 3 points on same line")]
+        //public void Constructor_InAStraightLine_ThrowsArgumentException(int point1x, int point1y, int point2x, int point2y)
+        //{
+        //    var origin = new Point(0, 0);
+        //    var point1 = new Point(point1x, point1y);
+        //    var point2 = new Point(point2x, point2y);
+
+        //    new Triangle(origin, point1, point2);
+        //}
+
+        //[Test]
+        //[TestCase(0, 3, 3, 0)]
+        //public void IsEquilateral_DifferentAngles_ReturnsFalse(int point1x, int point1y, int point2x, int point2y)
+        //{
+        //    var origin = new Point(0, 0);
+        //    var point1 = new Point(point1x, point1y);
+        //    var point2 = new Point(point2x, point2y);
+
+        //    var result = new Triangle(origin, point1, point2);
+
+        //    Assert.IsFalse(result.IsEquilateral());
+        //} 
+
+        #endregion
 
         [Test]
         [TestCase(3, 4, 5)]
@@ -35,31 +64,7 @@ namespace GeometricalObjects.Tests
             new Triangle(side1, side2, side3);
         }
 
-        [Test]
-        [TestCase(3, 3, 6, 6)]
-        [ExpectedException(typeof(ArgumentException), ExpectedMessage = "Can't have 3 points on same line")]
-        public void Constructor_InAStraightLine_ThrowsArgumentException(int point1x, int point1y, int point2x, int point2y)
-        {
-            var origin = new Point(0, 0);
-            var point1 = new Point(point1x, point1y);
-            var point2 = new Point(point2x, point2y);
-
-            new Triangle(origin, point1, point2);
-        }
-
-        [Test]
-        [TestCase(0, 3, 3, 0)]
-        public void IsEquilateral_DifferentAngles_ReturnsFalse(int point1x, int point1y, int point2x, int point2y)
-        {
-            var origin = new Point(0, 0);
-            var point1 = new Point(point1x, point1y);
-            var point2 = new Point(point2x, point2y);
-
-            var result = new Triangle(origin, point1, point2);
-
-            Assert.IsFalse(result.IsEquilateral());
-        }
-
+   
         [Test]
         [TestCase(2,2,2)]
         public void IsEquilateral_WhenAllSidesEqual_ReturnsTrue(double side1, double side2, double side3)

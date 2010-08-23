@@ -8,3 +8,8 @@ C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\bin\Debug\Trian
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.dll
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.pdb
+Z:\Git\Triangles\TriangleAssignment\Triangle\bin\Debug\Triangle.dll
+Z:\Git\Triangles\TriangleAssignment\Triangle\bin\Debug\Triangle.pdb
+Z:\Git\Triangles\TriangleAssignment\Triangle\obj\Debug\ResolveAssemblyReference.cache
+Z:\Git\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.dll
+Z:\Git\Triangles\TriangleAssignment\Triangle\obj\Debug\Triangle.pdb

@@ -20,3 +20,14 @@ C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debu
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.Properties.Resources.resources
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.exe
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.MainForm.resources
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.Properties.Resources.resources
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.exe
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.pdb
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.dll
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.pdb
+Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.pdb

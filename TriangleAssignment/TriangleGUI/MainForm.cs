@@ -13,6 +13,7 @@ namespace TriangleGUI
     public partial class MainForm : Form
     {
         private Triangle triangle;
+        private Graphics graphics;
 
         public MainForm()
         {
@@ -20,49 +21,44 @@ namespace TriangleGUI
             isScaleneLbl.Text = string.Empty;
             isIsolescenesLbl.Text = string.Empty;
             isEquilateralLbl.Text = string.Empty;
-            
+            graphics = splitContainer1.Panel2.CreateGraphics();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var sides = textBox2.Text;
+                if (!string.IsNullOrEmpty(textBox2.Text))
+                {
+                    var points = sides.Split(new [] { ' ' });
 
+                    var side1 = int.Parse(points[0]);
+                    var side2 = int.Parse(points[1]);
+                    var side3 = int.Parse(points[2]);
+                    
+                    triangle = new Triangle(side1, side2, side3);
+                    isScaleneLbl.Text = triangle.IsScalene() ? "yes" : "no";
+                    isIsolescenesLbl.Text = triangle.IsIsosceles() ? "yes" : "no";
+                    isEquilateralLbl.Text = triangle.IsEquilateral() ? "yes" : "no";
+                    Refresh();
+                }
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Couldn't parse input!");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
-         
-        }
-
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var vertex = new Point[3];
-            var coordinates = textBox1.Text;
-            if (!string.IsNullOrEmpty(textBox1.Text))
-            {   
-
-                var points = coordinates.Split(new char[] { ';' });
-                int i = 0;
-                foreach (var point in points)
-                {
-                    var coords = point.Split(new char[] { ',' });
-                    vertex[i++] = new Point(int.Parse(coords[0]), int.Parse(coords[1]));
-                }
-                triangle = new Triangle(vertex[0], vertex[1], vertex[2]);
-                isScaleneLbl.Text = triangle.IsScalene() ? "yes" : "no";
-                isIsolescenesLbl.Text = triangle.IsIsosceles() ? "yes" : "no";
-                isEquilateralLbl.Text = triangle.IsEquilateral() ? "yes" : "no";
-                Refresh();
-
-            }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
             if (triangle != null)
             {
-                triangle.Render(splitContainer1.Panel2.CreateGraphics());
+                triangle.Render(graphics);
             }
         }
     }

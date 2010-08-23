@@ -17,9 +17,7 @@ C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\De
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.pdb
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.dll
-Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.dll
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\nunit.framework.xml
-Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Rhino.Mocks.xml
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\ResolveAssemblyReference.cache
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.dll
 Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\obj\Debug\TriangleTestSuite.pdb
@@ -32,3 +30,5 @@ C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Triangle.dl
 C:\Projects\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Triangle.pdb
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Triangle.dll
 C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Triangle.pdb
+Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Triangle.dll
+Z:\Git\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\Triangle.pdb
