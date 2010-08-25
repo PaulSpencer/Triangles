@@ -31,3 +31,5 @@ Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\TriangleGUI.pdb
 Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.dll
 Z:\Git\Triangles\TriangleAssignment\TriangleGUI\bin\Debug\Triangle.pdb
 Z:\Git\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.pdb
+Z:\Projects\Triangle\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.exe
+Z:\Projects\Triangle\Triangles\TriangleAssignment\TriangleGUI\obj\x86\Debug\TriangleGUI.pdb
