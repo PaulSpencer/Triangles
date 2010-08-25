@@ -18,48 +18,6 @@ namespace GeometricalObjects
         private readonly double side2;
         private readonly double side3;
 
-        #region Construction with Points
-        
-        //private Point point1;
-        //private Point point2;
-        //private Point point3;
-
-        //public Triangle(Point point1, Point point2, Point point3)
-        //{
-        //    Contract.Requires(point1 != null && point2 != null && point3 != null);
-        //    Contract.Ensures(Math.Round(angle12 + angle23 + angle31, ROUNDING_ACCURACY) == SUM_INTERNAL_ANGLES);
-
-        //    if (point1.AreOnTheSameLine(point2, point3))
-        //    {
-        //        throw new ArgumentException("Can't have 3 points on same line");
-        //    }
-
-        //    this.point1 = point1;
-        //    this.point2 = point2;
-        //    this.point3 = point3;
-
-        //    this.side1 = point1.GetLineLength(point2);
-        //    this.side2 = point2.GetLineLength(point3);
-        //    this.side3 = point3.GetLineLength(point1);
-
-        //    InitializeAngles();
-        //} 
-        
-        //private double GetInternalAngle(Point anglePoint, Point secondPoint, Point thirdPoint)
-        //{
-        //    Contract.Requires(anglePoint != null);
-        //    Contract.Requires(secondPoint != null);
-        //    Contract.Requires(thirdPoint != null);
-
-        //    double side1 = anglePoint.GetLineLength(secondPoint);
-        //    double oppositeSide = secondPoint.GetLineLength( thirdPoint);
-        //    double side2 = thirdPoint.GetLineLength(anglePoint);
-
-        //    return GetInternalAngle(side1, side2, oppositeSide);
-        //}
-
-        #endregion
-
         public Triangle(double side1, double side2, double side3)
         {
             Contract.Requires(0 < side1 && 0 < side2 && 0 < side3);
@@ -188,7 +146,5 @@ namespace GeometricalObjects
             graphics.DrawPolygon(new Pen(Color.RoyalBlue), new[] { vertex1, vertex2, vertex3 });
 
         }
-
-        
     }
 }

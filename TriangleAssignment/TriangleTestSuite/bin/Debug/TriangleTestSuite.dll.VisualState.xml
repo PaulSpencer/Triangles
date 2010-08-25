@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1025]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</TopNode>
-  <SelectedNode>[0-1026]GeometricalObjects</SelectedNode>
+  <TopNode>[0-1042]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</TopNode>
+  <SelectedNode>[0-1042]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1025]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll" Expanded="true" />
-    <Node UniqueName="[0-1026]GeometricalObjects" Expanded="true" />
-    <Node UniqueName="[0-1000]GeometricalObjects.GeometryCalculatorTestSuite" Expanded="true" />
-    <Node UniqueName="[0-1006]GeometricalObjects.GeometryCalculatorTestSuite.CalculateArea_ThreeSides_TriangleArea" Expanded="true" />
-    <Node UniqueName="[0-1008]GeometricalObjects.GeometryCalculatorTestSuite.GetHeight_GiveAreaAndBase_ReturnsHeight" Expanded="true" />
-    <Node UniqueName="[0-1001]GeometricalObjects.GeometryCalculatorTestSuite.TestCalculator_TwoPointsOnThePlane_DistanceBetweenPoints" Expanded="true" />
-    <Node UniqueName="[0-1027]GeometricalObjects.Tests" Expanded="true" />
-    <Node UniqueName="[0-1013]GeometricalObjects.Tests.TriangleTestSuite" Expanded="true" />
+    <Node UniqueName="[0-1042]C:\Users\DeathByVegetables\Triangles\TriangleAssignment\TriangleTestSuite\bin\Debug\TriangleTestSuite.dll" Expanded="true" />
+    <Node UniqueName="[0-1043]GeometricalObjects" Expanded="true" />
+    <Node UniqueName="[0-1044]GeometricalObjects.Tests" Expanded="true" />
+    <Node UniqueName="[0-1000]GeometricalObjects.Tests.TriangleTestSuite" Expanded="true" />
   </Nodes>
 </VisualState>
